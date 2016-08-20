@@ -1,6 +1,6 @@
 $(function() {
 
-  navigator.geolocation.getCurrentPosition(sucCoo, errCo);
+  navigator.geolocation.getCurrentPosition(sucCoo, errCo , { enableHighAccuracy: true ,timeout : 5000});
 
   function sucCoo(position) {
     var urlAPI = "https://api.wunderground.com/api/d3aea801236f5512/geolookup/conditions/lang:BR/q/";
