@@ -1,0 +1,43 @@
+.wrap{
+  width: 60%;
+    height: 60%;
+    
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+  
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+#icon_wu {
+  width: 150px;
+}
+.navbar-brand{
+  font-weight:bold;
+  font-size:200%;
+  color: rgb(23,112,182) ;
+}
+#display{
+  font-size:200%;
+}
+#location{
+  color: rgb(253,185,49);
+}
+ #temperature{
+  color: rgb(224, 84 ,47);
+}
+ #degree{
+  color: rgb(212,32,42);
+}
+
