@@ -1,6 +1,10 @@
-$(function() {
+$(function () {
 
-  navigator.geolocation.getCurrentPosition(sucCoo, errCo , { enableHighAccuracy: true ,timeout : 5000});
+  navigator.geolocation.getCurrentPosition(sucCoo, errCo, {
+    enableHighAccuracy: true
+    , timeout: 5000
+  }
+  );
 
   function sucCoo(position) {
     var urlAPI = "https://api.wunderground.com/api/d3aea801236f5512/geolookup/conditions/lang:BR/q/";
@@ -10,7 +14,7 @@ $(function() {
     $.ajax({
       url: urlAPI,
       dataType: "jsonp",
-      success: function(parsed_json) {
+      success: function (parsed_json) {
         var location = parsed_json['current_observation']['display_location']['full'];
         var temp_f = parsed_json['current_observation']['temp_f'];
         var temp_c = parsed_json['current_observation']['temp_c'];
@@ -18,6 +22,8 @@ $(function() {
         var icon = parsed_json['current_observation']['icon_url'];
         var icon_img = new Image();
         icon_img.src = icon;
+        $('.loader').hide();
+        $('#display').show();
         $('#display #location').html(location);
         $('#display #temperature').html(temp_c);
         $('#display #degree').html(' &#8451');
